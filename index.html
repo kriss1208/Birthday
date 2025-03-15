@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday, Sister!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: #ffccff;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: center;
+            animation: slideIn 2s ease-in-out;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(100vh); }
+            to { transform: translateY(0); }
+        }
+        h1 {
+            color: #397b06;
+            font-size: 3rem;
+        }
+        .message {
+            font-size: 1.5rem;
+            margin: 20px 0;
+        }
+        .photo img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #211186;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #e01f06;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background: #bdeb05;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Happy Birthday, Sister! 🎉</h1>
+        <p class="message">Having a sister like you is a blessing. You’ve been my friend and confidant. May this Birthday bring you all the joy and happiness you deserve. <b>Happy Birthday!</b> – enjoy your special day!</p>
+        <div class="photo">
+            <img id="sisterPhoto" src="image1.jpg" alt="Sister's Photo">
+        </div>
+        <a href="#" class="button" onclick="changePhoto()">See More Memories 📸</a>
+        <a href="anotherindex.html" class="button">Click Here 🎁</a>
+    </div>
+
+    <audio autoplay loop>
+        <source src="birthday_song.mp3" type="audio/mpeg">
+    
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        const photos = ["image1.jpg", "image2.jpg", "image3.jpg", "image4.jpg"];
+        let currentIndex = 0;
+
+        function changePhoto() {
+            currentIndex = (currentIndex + 1) % photos.length;
+            document.getElementById('sisterPhoto').src = photos[currentIndex];
+        }
+    </script>
+</body>
+</html>
