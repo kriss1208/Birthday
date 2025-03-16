@@ -17,7 +17,7 @@
             overflow: hidden;
         }
         .card {
-            background: white;
+            background: rgb(249, 246, 246);
             padding: 40px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
@@ -29,12 +29,15 @@
             to { transform: translateY(0); }
         }
         h1 {
-            color: #397b06;
+            color: #69e60a;
             font-size: 3rem;
         }
         .message {
             font-size: 1.5rem;
             margin: 20px 0;
+        }
+        b {
+            color: #f80505;
         }
         .photo img {
             width: 300px;
@@ -43,11 +46,15 @@
             object-fit: cover;
             border: 5px solid #211186;
         }
+        h2  {
+            color: #f80505;
+            font-size: 1.8rem;
+        }
         .button {
             display: inline-block;
             margin-top: 20px;
             padding: 10px 20px;
-            background: #e01f06;
+            background: #5710f0;
             color: white;
             text-decoration: none;
             border-radius: 10px;
@@ -65,8 +72,9 @@
         <div class="photo">
             <img id="sisterPhoto" src="image1.jpg" alt="Sister's Photo">
         </div>
-        <a href="#" class="button" onclick="changePhoto()">See More Memories 📸</a>
-        <a href="anotherindex.html" class="button">Click Here 🎁</a>
+        <h2>Rinkey</h2>
+        <a href="#" class="button" onclick="changePhoto()"><b>See More Memories 📸</b></a>
+        <a href="anotherindex.html" class="button"><b>Click Here 🎁</b></a>
     </div>
 
     <audio autoplay loop>
